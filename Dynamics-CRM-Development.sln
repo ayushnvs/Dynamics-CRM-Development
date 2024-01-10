@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My Plugin", "My Plugin\My Plugin.csproj", "{A9F40BED-4819-4771-9A2A-F1AD28A8B9E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyPlugin", "My Plugin\MyPlugin.csproj", "{A9F40BED-4819-4771-9A2A-F1AD28A8B9E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
