@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.8.34330.188
+VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyPlugin", "My Plugin\MyPlugin.csproj", "{A9F40BED-4819-4771-9A2A-F1AD28A8B9E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlugin", "MyPlugin\MyPlugin.csproj", "{DA3A4CFA-501A-4F6F-BE2B-A176185A412A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A9F40BED-4819-4771-9A2A-F1AD28A8B9E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9F40BED-4819-4771-9A2A-F1AD28A8B9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9F40BED-4819-4771-9A2A-F1AD28A8B9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9F40BED-4819-4771-9A2A-F1AD28A8B9E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA3A4CFA-501A-4F6F-BE2B-A176185A412A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA3A4CFA-501A-4F6F-BE2B-A176185A412A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA3A4CFA-501A-4F6F-BE2B-A176185A412A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA3A4CFA-501A-4F6F-BE2B-A176185A412A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5E170B91-97B4-4253-B1B3-BC33D0833F30}
+		SolutionGuid = {DC4129D7-0160-4C6A-A73F-6C0E998337BC}
 	EndGlobalSection
 EndGlobal
