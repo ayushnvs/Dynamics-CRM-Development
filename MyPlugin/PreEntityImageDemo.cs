@@ -5,11 +5,10 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Xrm.Sdk.Query;
 
 namespace MyPlugin
 {
-    public class DuplicateCheck : IPlugin
+    public class PreEntityImageDemo : IPlugin
     {
         public void Execute(IServiceProvider serviceProvider)
         {
@@ -26,7 +25,7 @@ namespace MyPlugin
                 context.InputParameters["Target"] is Entity)
             {
                 // Obtain the target entity from the input parameters.  
-                Entity contact = (Entity)context.InputParameters["Target"];
+                Entity entity = (Entity)context.InputParameters["Target"];
 
                 // Obtain the IOrganizationService instance which you will need for  
                 // web service calls.  
@@ -37,22 +36,12 @@ namespace MyPlugin
                 try
                 {
                     // Plug-in business logic goes here
-                    String email = String.Empty;
-                    if (contact.Attributes.Contains("emailaddress1"))
-                    {
-                        email = contact.Attributes["emailaddress1"].ToString();
+                    string modifiedBusinessPhone = entity.Attributes["telephone1"].ToString();
 
-                        QueryExpression query = new QueryExpression("contact");
-                        query.ColumnSet = new ColumnSet(new String[] { "emailaddress1"} );
-                        query.Criteria.AddCondition("emailaddress1", ConditionOperator.Equal, email);
+                    Entity preImage = (Entity)context.PreEntityImages["PreImage"];
+                    string oldBusinessPhone = preImage.Attributes["telephone"].ToString();
 
-                        EntityCollection collection = service.RetrieveMultiple(query);
-
-                        if (collection.Entities.Count > 0)
-                        {
-                            throw new InvalidPluginExecutionException("Contact with email already exist.");
-                        }
-                    }
+                    throw new InvalidPluginExecutionException("Phone is changed from " + oldBusinessPhone + " to " + modifiedBusinessPhone);
                 }
 
                 catch (FaultException<OrganizationServiceFault> ex)

@@ -37,7 +37,7 @@ namespace MyPlugin
                 {
                     // Plug-in business logic goes here.
 
-                    Entity taskRecord = new Entity("task");
+                    Entity taskRecord = new Entity("Task");
                     taskRecord.Attributes.Add("Subject", "Follow up");
                     taskRecord.Attributes.Add("Description", "Follow up with the contact.");
                     // Date
