@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlugin", "MyPlugin\MyPlugin.csproj", "{DA3A4CFA-501A-4F6F-BE2B-A176185A412A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCustomWorkflows", "MyCustomWorkflows\MyCustomWorkflows.csproj", "{9D196B0B-E1EA-42C5-850E-81125B787064}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{74855B19-E429-48E8-9AA9-0FCB204EEB39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{DA3A4CFA-501A-4F6F-BE2B-A176185A412A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA3A4CFA-501A-4F6F-BE2B-A176185A412A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA3A4CFA-501A-4F6F-BE2B-A176185A412A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D196B0B-E1EA-42C5-850E-81125B787064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D196B0B-E1EA-42C5-850E-81125B787064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D196B0B-E1EA-42C5-850E-81125B787064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D196B0B-E1EA-42C5-850E-81125B787064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74855B19-E429-48E8-9AA9-0FCB204EEB39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74855B19-E429-48E8-9AA9-0FCB204EEB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74855B19-E429-48E8-9AA9-0FCB204EEB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74855B19-E429-48E8-9AA9-0FCB204EEB39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
