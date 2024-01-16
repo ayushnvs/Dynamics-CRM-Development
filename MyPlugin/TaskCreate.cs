@@ -10,6 +10,11 @@ namespace MyPlugin
 {
     public class TaskCreate : IPlugin
     {
+        int tax;
+        public TaskCreate(string unSecureConfig, string secureConfig) 
+        {
+            tax = Convert.ToInt32(unSecureConfig);
+        }
         public void Execute(IServiceProvider serviceProvider)
         {
             // Obtain the tracing service
@@ -36,6 +41,7 @@ namespace MyPlugin
                 try
                 {
                     // Plug-in business logic goes here.
+                    string key = context.SharedVariables["key1"].ToString();
 
                     Entity taskRecord = new Entity("Task");
                     taskRecord.Attributes.Add("Subject", "Follow up");

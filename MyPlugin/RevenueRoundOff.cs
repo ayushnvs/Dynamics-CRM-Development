@@ -1,10 +1,14 @@
-﻿using System;
+﻿using Microsoft.Xrm.Sdk;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.ServiceModel;
-using Microsoft.Xrm.Sdk;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace MyPlugin
 {
-    public class HelloWorld : IPlugin
+    public class RevenueRoundOff : IPlugin
     {
         public void Execute(IServiceProvider serviceProvider)
         {
@@ -21,7 +25,7 @@ namespace MyPlugin
                 context.InputParameters["Target"] is Entity)
             {
                 // Obtain the target entity from the input parameters.  
-                Entity entity = (Entity)context.InputParameters["Target"];
+                Entity account = (Entity)context.InputParameters["Target"];
 
                 // Obtain the IOrganizationService instance which you will need for  
                 // web service calls.  
@@ -31,18 +35,19 @@ namespace MyPlugin
 
                 try
                 {
-                    context.SharedVariables.Add("key1", "Some infor from shared variable");
-                    // Reading from attribute values
-                    string firstName = string.Empty;
-                    if (entity.Attributes.Contains("firstname"))
-                    { 
-                        firstName = entity.Attributes["firstname"].ToString();
-                    }
-                    string lastName = entity.Attributes["lastname"].ToString();
+                    // Plug-in business logic goes here.
 
-                    string name = firstName.Trim().Length != 0 ? firstName + " " + lastName : lastName;
-                    // Assign data to description attribute
-                    entity.Attributes.Add("description", "Hello " + name);
+                    tracingService.Trace(context.Depth.ToString());
+                    if (context.Depth > 1) return;
+
+                    if (account.Attributes["revenue"] != null)
+                    {
+                        decimal revenue = ((Money)account.Attributes["revenue"]).Value;
+                        revenue = Math.Round(revenue, 1);
+
+                        account.Attributes["revenue"] = new Money(revenue);
+                    }
+                    
                 }
 
                 catch (FaultException<OrganizationServiceFault> ex)
