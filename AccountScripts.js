@@ -1,11 +1,9 @@
 // JavaScript source code
 
 // Prevent Auto-save
-formOnSave = function (executionContext) {
-    var eventArgs = executionContext.getEventArgs();
-    if (eventArgs.getSaveMode() == 70) {
-        eventArgs.preventDefault()
-    }
+function formOnSave (executionContext) {
+    console.log("Calling Helper function.")
+    Helper.disableAutoSave(executionContext)
 }
 
 // Validate Phone US format
