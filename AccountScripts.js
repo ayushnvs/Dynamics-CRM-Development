@@ -1,5 +1,14 @@
 // JavaScript source code
 
+// Prevent Auto-save
+formOnSave = function (executionContext) {
+    var eventArgs = executionContext.getEventArgs();
+    if (eventArgs.getSaveMode() == 70) {
+        eventArgs.preventDefault()
+    }
+}
+
+// Validate Phone US format
 function MainPhoneOnChange(executionContext) {
     var formContext = executionContext.getFormContext();
     var phoneNumber = formContext.getAttribute("telephone1").getValue();
