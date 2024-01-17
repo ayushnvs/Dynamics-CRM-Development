@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function buttonClick() {
+            // Accessing form elements from HTML web resource
+
+            var accountName = parent.Xrm.Page.getAttribute("name").getValue()
+            document.getElementById("text").innerHTML = accountName
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click Me" onclick="buttonClick()"/>
+    <p id="text"></p>
+</body>
+</html>
